@@ -57,7 +57,7 @@ ADD 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 # Add volumes for MySQL 
 VOLUME  ["/etc/mysql", "/var/lib/mysql" ]
 
-# Retrieve and Installing Pimcore
+# Retrieve and Installing ZF2
 RUN rm -rf /var/www/html/
 RUN curl -sS https://getcomposer.org/installer | php
 RUN php composer.phar create-project -sdev --repository-url="http://packages.zendframework.com" zendframework/skeleton-application /var/www/html/
